@@ -74,7 +74,7 @@ public class VoiceCallScreenControls extends LinearLayout {
     AudioManager audioManager = (AudioManager) getContext().getSystemService(Context.AUDIO_SERVICE);
 
     if (!isBluetoothAvailable) {
-      bluetoothButton.setVisibility(View.GONE);
+      ;//bluetoothButton.setVisibility(View.GONE);
     } else {
       bluetoothButton.setVisibility(View.VISIBLE);
     }
@@ -93,6 +93,10 @@ public class VoiceCallScreenControls extends LinearLayout {
 
   public void setMicrophoneEnabled(boolean enabled) {
     audioMuteButton.setChecked(!enabled, false);
+  }
+
+  public void setSpeakerButtonEnabled(boolean enabled) {
+     speakerButton.setChecked(enabled, false);
   }
 
   public void setControlsEnabled(boolean enabled) {
